@@ -1,0 +1,50 @@
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/amp/qualtrics/qamp.js'], function(APIConstructor, ampExtension){
+
+	var API = new APIConstructor();
+	
+	
+	return ampExtension({
+		primeCats :  [
+			{
+				nameForFeedback : 'Alone',  //Will be used in the user feedback 
+				nameForLogging : 'Alone', //Will be used in the logging
+				//An array of all media objects for this category.
+				mediaArray : [
+				    {word : 'Alone'}, 
+					{word : 'By myself'}, 
+					{word : 'Solitude'}, 
+					{word : 'Me-time'}, 
+					{word : 'Being alone'}, 
+					{word : 'Solitary'}, 
+					{word : 'Time alone'}, 
+					{word : 'With myself'}]
+
+			}, 
+			{
+				nameForFeedback : 'With people',  //Will be used in the user feedback 
+				nameForLogging : 'With people', //Will be used in the logging
+				//An array of all media objects for this category.
+				mediaArray : [
+				    {word : 'Lonely'}, 
+					{word : 'Isolated'}, 
+					{word : 'Alienated'}, 
+					{word : 'Withdrawn'}, 
+					{word : 'Loneliness'}, 
+					{word : 'Abandoned'}, 
+					{word : 'Rejected'}, 
+					{word : 'Friendless'}]
+			}
+		],
+
+		examplePrimeStimulus : 
+		{
+			nameForLogging : 'examplePrime', //Will be used in the logging
+			//An array of all media objects for this category.
+			mediaArray : [{image : 'ampchair.jpg'}, {image : 'amplamp.jpg'}, {image : 'ampumbrella.jpg'}]
+		},
+
+		base_url : {//Where are your images at?
+			image : 'https://baranan.github.io/minno-tasks/images/ampImages'
+		}
+	});
+});
