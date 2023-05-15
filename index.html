@@ -38,7 +38,13 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/amp/qualt
 		examplePrimeStimulus : 
 		{
 			nameForLogging : 'examplePrime', //Will be used in the logging
+			//An array of all media objects for this category.
+			//mediaArray : [{word : 'Table'}, {word : 'Chair'}]
+			mediaArray : [{image : 'ampchair.jpg'}, {image : 'amplamp.jpg'}, {image : 'ampumbrella.jpg'}]
 		},
 
+		base_url : {//Where are your images at?
+			image : 'https://baranan.github.io/minno-tasks/images/ampImages'
+		}
 	});
 });
